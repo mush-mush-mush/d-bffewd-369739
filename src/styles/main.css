@@ -1,0 +1,508 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@-moz-document url-prefix() {
+  html {
+    scrollbar-width: none;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  min-height: 100vh;
+  background: radial-gradient(
+    100% 173.65% at 0% 0%,
+    rgba(126, 242, 157, 0.3) 0%,
+    rgba(41, 136, 167, 0.3) 100%
+  );
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  position: relative;
+  margin: 5rem 0;
+  min-height: 50rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.navbar {
+  height: 3rem;
+  margin: 0.5rem 0;
+  padding: 0 2rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  background: linear-gradient(135deg, #2988a7 -21.62%, #7ef29d 117.57%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar input {
+  border: 1px solid #f7f7f7;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  width: 10rem;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.navbar button {
+  width: 3rem;
+  border: 1px solid #f7f7f7;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.navbar input:focus,
+.navbar button:focus {
+  border: 1px solid #52bba3;
+  box-shadow: none !important;
+}
+
+.navbar input:focus {
+  width: 20rem;
+}
+
+.navbar button:hover {
+  border: 1px solid #52bba3;
+  background-color: #52bba3;
+}
+.carousel {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item-details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 5rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  background: linear-gradient(
+    00deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.carousel-item-details p {
+  font-weight: 300;
+}
+
+.carousel-item-details span {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.carousel-item-details .metric {
+  margin-top: 0.5rem;
+}
+
+.carousel-item-details .metric,
+.carousel-item-details .metric .score,
+.carousel-item-details .metric .popularity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carousel-item-details .metric .score {
+  margin-right: 2rem;
+}
+
+.carousel-item-details .metric i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.carousel-item-details .metric span {
+  font-size: 1.2rem;
+}
+
+.carousel-item img {
+  height: 35rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list-item h2 {
+  font-weight: 700;
+  color: #818181;
+  margin-right: 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  max-width: 5rem;
+  object-position: center;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card-body h5 {
+  font-weight: 700;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+}
+
+.about {
+  background: linear-gradient(135deg, #2988a7 -21.62%, #7ef29d 117.57%);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+.about a {
+  background-color: #f7f7f7;
+  color: #52bba3;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  line-height: 2rem;
+}
+
+.about a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.open-modal {
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.open-modal:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+.overlay::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 100px;
+  top: 3rem;
+  right: 10%;
+  transform: translate(0%, -1.5rem);
+  font-size: 2rem;
+  background-color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 10;
+  transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.close-modal:hover {
+  background: linear-gradient(135deg, #2988a7 -21.62%, #7ef29d 117.57%);
+  color: #ffffff;
+}
+
+.spinner {
+  min-height: 10rem;
+  align-items: center;
+  color: #52bba3;
+}
+
+.modal-box {
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-height: 65vh;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal-box::-webkit-scrollbar {
+  display: none;
+}
+
+.search-result-list {
+  padding: 2rem;
+}
+
+.anime-content {
+  min-height: 40rem;
+}
+
+.anime-content h1 {
+  font-size: 2.7rem !important;
+}
+
+.anime-content .banner {
+  height: 17rem;
+  overflow: hidden;
+}
+
+.anime-content .banner-img {
+  height: 105%;
+  object-fit: cover;
+  object-position: center;
+  background: linear-gradient(135deg, #2988a7 -21.62%, #7ef29d 117.57%);
+}
+
+.anime-content .poster {
+  height: 15rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.anime-content .btn {
+  background: linear-gradient(135deg, #f7f7f7 -21.62%, #f7f7f7 117.57%);
+}
+
+.anime-content .btn svg {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.anime-content .btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2988a7 -21.62%, #7ef29d 117.57%);
+}
+
+.anime-content .btn:hover svg path {
+  fill: #ffffff;
+}
+
+.anime-content .score,
+.anime-content .popularity {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.1rem;
+}
+
+.anime-content .score svg,
+.anime-content .popularity svg {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.anime-content .nav-link.active {
+  color: #000000;
+  background-color: transparent !important;
+  border-radius: 0px;
+  border-bottom: 3px solid #000000;
+  opacity: 1;
+}
+
+.anime-content .nav-link {
+  color: #000000;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 991px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .carousel-item-details {
+    padding-left: 3rem;
+  }
+
+  .list-item h2 {
+    font-weight: 700;
+    color: #818181;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 75%;
+  }
+
+  main {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .navbar {
+    height: 3rem;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+  }
+
+  .navbar input:focus {
+    width: 15rem;
+  }
+
+  .carousel-item-details {
+    padding-left: 2rem;
+  }
+
+  .content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .close-modal {
+    right: 5%;
+    transform: translate(0%, -1.5rem);
+  }
+
+  .modal-box {
+    width: 90%;
+  }
+
+  .anime-content .banner {
+    height: 10rem;
+  }
+
+  .anime-content .banner-img {
+    filter: blur(5px);
+  }
+
+  .anime-content .poster {
+    margin-top: -8rem;
+  }
+}
